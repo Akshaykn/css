@@ -1,0 +1,224 @@
+<html>
+
+<head>
+    <title> Cards Hover effects </title>
+    <link rel="stylesheet"  href="main.css">
+    <script>
+        function show_helptext(temp,direction)
+        {
+            let t1 = document.getElementById(temp+'info');
+            t1.style.display = 'inline-block'; 
+            t1.classList.add(direction);
+        } 
+        function close_helptext(temp,direction)
+        {
+            let t1 = document.getElementById(temp+'info');
+            t1.style.display = 'none'; 
+            t1.classList.remove(direction);
+        } 
+        setTimeout(() => {
+            optionOpen = true;
+            let temp1 = document.getElementById("id__face1");
+            if (temp1) {
+                temp1.addEventListener('click', () => {
+                    if (optionOpen) {
+                        console.log('option:', optionOpen);
+                        let temp2 = document.getElementById("id__face2");
+                        if (temp2) {
+                            temp2.classList.add('trans1');
+                            if (temp2.classList.contains('trans1_out')) {
+                                temp2.classList.remove('trans1_out');
+                            }
+                        }
+                        let temp3 = document.getElementById("id__face3");
+                        if (temp3) {
+                            temp3.classList.add('trans2');
+                            if (temp3.classList.contains('trans2_out')) {
+                                temp3.classList.remove('trans2_out');
+                            }
+                        }
+                        let temp4 = document.getElementById("id__face4");
+                        if (temp4) {
+                            temp4.classList.add('trans3');
+                            if (temp4.classList.contains('trans3_out')) {
+                                temp4.classList.remove('trans3_out');
+                            }
+                        }
+                        let temp5 = document.getElementById("id__face5");
+                        if (temp5) {
+                            temp5.classList.add('trans4');
+                            if (temp5.classList.contains('trans4_out')) {
+                                temp5.classList.remove('trans4_out');
+                            }
+                        }
+                        optionOpen = false;
+                    }
+                    else {
+                        console.log('option', optionOpen);
+                        
+                        let temp2 = document.getElementById("id__face2");
+                        if (temp2) {
+                            temp2.classList.add('trans1_out');
+                            if (temp2.classList.contains('trans1')) {
+                                temp2.classList.remove('trans1');
+                            }
+                        }
+                        let temp3 = document.getElementById("id__face3");
+                        if (temp3) {
+                            temp3.classList.add('trans2_out');
+                            if (temp3.classList.contains('trans2')) {
+                                temp3.classList.remove('trans2');
+                            }
+                        }
+                        let temp4 = document.getElementById("id__face4");
+                        if (temp4) {
+                            temp4.classList.add('trans3_out');
+                            if (temp4.classList.contains('trans3')) {
+                                temp4.classList.remove('trans3');
+                            }
+                        }
+                        let temp5 = document.getElementById("id__face5");
+                        if (temp5) {
+                            temp5.classList.add('trans4_out');
+                            if (temp5.classList.contains('trans4')) {
+                                temp5.classList.remove('trans4');
+                            }
+                        }
+                        optionOpen = true;
+                    }
+                });
+            }
+
+            //********************************************************//
+            opentooltip =true;
+            let temp6 = document.getElementById('id__face2');
+            if(temp6){
+               temp6.addEventListener('click',()=>{
+                     if(opentooltip){
+                        this.show_helptext('id__face2','left');
+                        opentooltip = false;
+                     }
+                     else{
+                         this.close_helptext('id__face2','left');
+                         opentooltip = true;
+                     }
+               });  
+            }  
+            let temp7 = document.getElementById('id__face3') 
+            if(temp7){
+               temp7.addEventListener('click',()=>{
+                if(opentooltip){
+                        this.show_helptext('id__face3','left');
+                        opentooltip = false;
+                     }
+                     else{
+                         this.close_helptext('id__face3','left');
+                         opentooltip = true;
+                     }
+               });  
+            }  
+            let temp8 = document.getElementById('id__face4') 
+            if(temp8){
+               temp8.addEventListener('click',()=>{
+                if(opentooltip){
+                        this.show_helptext('id__face4','left');
+                        opentooltip = false;
+                     }
+                     else{
+                         this.close_helptext('id__face4','left');
+                         opentooltip = true;
+                     } 
+               });  
+            }  
+            let temp9 = document.getElementById('id__face5') 
+            if(temp9){
+               temp9.addEventListener('click',()=>{
+                if(opentooltip){
+                        this.show_helptext('id__face5','right');
+                        opentooltip = false;
+                     }
+                     else{
+                         this.close_helptext('id__face5','right');
+                         opentooltip = true;
+                     } 
+               });  
+            }  
+        }, 2000);
+    </script>
+</head>
+<body>
+    <div class="container">
+
+       
+        <div class="card" id="id__face4">
+        <div class="face face4">
+            <div class="content">
+                <img src="./sketch.png">
+
+            </div>
+        </div>
+        <div class="info" id="id__face4info">
+                <div class="infofeild">
+                    <h3> this is palette</h3>
+                </div>
+            </div>
+    </div>
+
+    <div class="card"  id="id__face5">
+        <div class="face face5">
+            <div class="content">
+                <img src="./startup.png">
+
+            </div>
+        </div>
+        <div class="info" id="id__face5info">
+                <div class="infofeild" >
+                    <h3> this is palette</h3>
+                </div>
+            </div>
+    </div>
+
+        <div class="face face1" id="id__face1">
+            <div class="content">
+
+                <img src="./creativity.png">
+
+            </div>
+        </div>
+        <div class="card" id="id__face2"> 
+        <div class="face face2" >
+            <div class="content">
+
+                <img src="./paint-palette.png">
+
+            </div>
+
+        </div>
+        <div class="info" id="id__face2info">
+                <div class="infofeild">
+                    <h3> this is palette</h3>
+                </div>
+            </div>
+    </div> 
+       
+        <div class="card" id="id__face3"> 
+        <div class="face face3" >
+            <div class="content">
+
+                <img src="./paint-roller.png">
+
+            </div>
+        </div>
+        <div class="info" id="id__face3info">
+                <div class="infofeild">
+                    <h3> this is palette</h3>
+                </div>
+            </div>
+    </div>
+
+
+    </div>
+
+</body>
+
+</html>
